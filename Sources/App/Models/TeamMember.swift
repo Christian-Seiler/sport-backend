@@ -1,6 +1,9 @@
 import Fluent
+import Vapor
+import Foundation
 
-final class TeamMember: Model {
+
+final class TeamMember: Model, Content {
         static let schema = "teammembers"
     
     @ID(key: .id)

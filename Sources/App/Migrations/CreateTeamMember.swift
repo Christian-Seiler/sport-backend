@@ -17,5 +17,7 @@ struct CreateTeamMember: AsyncMigration {
             .create()
     }
     
-    
+    func revert(on database: Database) async throws {
+        await try database.schema(TeamMember.schema).delete()
+    }
 }

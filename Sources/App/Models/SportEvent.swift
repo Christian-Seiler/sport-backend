@@ -6,7 +6,19 @@
 //
 
 import Fluent
+import Foundation
 
 final class SportEvent: Model {
+    
+    static let schema = "sportevents"
+    
+    @ID(key: .id)
+    var id: UUID?
+    
+    init() {}
+    
+    init(id: UUID? = nil) {
+        self.id = id
+    }
     
 }
